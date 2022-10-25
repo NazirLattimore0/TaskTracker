@@ -1,10 +1,9 @@
 :root {
-  --dark: #374151;
+  --dark: #fafafa;
   --darker: #1f2937;
   --darkest: #111827;
-  --grey: #6b7280;
-  --pink: #26fa00;
-  --purple: #bfbacb;
+  --grey: #718fc9;
+  --green: #26fa00;
   --light: #eee;
 }
 
@@ -19,7 +18,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: #fff;
-  background-color: var(--dark);
+  background-color: var(--grey);
+  margin-top: 5%;
 }
 
 header {
@@ -32,8 +32,11 @@ header {
 header h1 {
   font-size: 2.5rem;
   font-weight: 300;
-  color: var(--grey);
+  color: var(--darker);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #new-task-form {
@@ -52,21 +55,21 @@ button {
   flex: 1 1 0%;
   background-color: var(--darker);
   padding: 1rem;
-  border-radius: 1rem;
-  margin-right: 1rem;
-  color: var(--light);
+  border-radius: 3rem;
+  margin-right: 0;
+  color: var(--darker);
   font-size: 1.25rem;
 }
 
 #new-task-input::placeholder {
-  color: var(--grey);
+  color: var(--dark);
 }
 
 #new-task-submit {
-  color: var(--pink);
+  color: var(--green);
   font-size: 1.25rem;
   font-weight: 700;
-  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  background-image: linear-gradient(to right, var(--green), var(--green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
@@ -104,7 +107,7 @@ main {
   justify-content: space-between;
   background-color: var(--darkest);
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -121,7 +124,7 @@ main {
 }
 
 .task .content .text:not(:read-only) {
-  color: var(--pink);
+  color: var(--green);
 }
 
 .task .actions {
@@ -147,11 +150,21 @@ main {
 }
 
 .task .actions .edit {
-  background-image: linear-gradient(to right, var(--pink), var(--purple));
+  background-image: linear-gradient(to right, var(--green), var(--green));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .task .actions .delete {
   color: crimson;
+}
+
+/* regular desktop styles */
+
+@media only screen and (max-device-width: 600px) {
+}
+
+/* mobile only styles when the device is 0-600px in maximum width */
+
+@media only screen and (max-device-width: 1000px) {
 }

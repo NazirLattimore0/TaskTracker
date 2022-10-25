@@ -1,4 +1,8 @@
+// <---   importing json   -->
+
 window.addEventListener("load", () => {
+  //once the whole page is loaded we are running the form called new-task-form
+
   const form = document.querySelector("#new-task-form");
   const input = document.querySelector("#new-task-input");
   const list_el = document.querySelector("#tasks");
@@ -7,6 +11,10 @@ window.addEventListener("load", () => {
     e.preventDefault();
 
     const task = input.value;
+    if (!task) {
+      alert("Please insert a task");
+      return;
+    } // if you dont input anything you
 
     const task_el = document.createElement("div");
     task_el.classList.add("task");
@@ -44,7 +52,7 @@ window.addEventListener("load", () => {
 
     input.value = "";
 
-    task_edit_el.addEventListener("click", (e) => {
+    task_edit_el.addEventListener("click", () => {
       if (task_edit_el.innerText.toLowerCase() == "edit") {
         task_edit_el.innerText = "Save";
         task_input_el.removeAttribute("readonly");
@@ -55,8 +63,14 @@ window.addEventListener("load", () => {
       }
     });
 
-    task_delete_el.addEventListener("click", (e) => {
+    task_delete_el.addEventListener("click", () => {
       list_el.removeChild(task_el);
     });
   });
+});
+
+fs.readFile("demofile1.html", function (err, data) {
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.write(data);
+  return res.end();
 });
