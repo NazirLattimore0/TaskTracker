@@ -1,29 +1,31 @@
-// <--- connecting to a json file --->
-[
-  {
-    id: 1,
-    taskName: "Brush Teeth",
-  },
-  {
-    id: 2,
-    taskName: "go to work",
-  },
-];
+// // <--- connecting to a json file ---->
+// const http = require("http");
+// const port = process.env.port || 5000;
 
-const tasks = [
-  {
-    id: 1,
-    taskName: "Brush Teeth",
-  },
-  {
-    id: 2,
-    taskName: "go to work",
-  },
-];
-const addTask = {
-  taskName: "new task",
-};
-const newId = tasks.sort((t1, t2) => t1.id - t2.id)[0].id;
-addTask.id = newId;
-tasks.push(addTask);
-fs.saveFile(tasks, fileName);
+// // here we will use our .createServer method to accept our request and response
+// // here we created a server for our computer without express
+// http
+//   .createServer((req, res) => {
+//     res.writeHead(200, { "Content-Type": "text/html" });
+
+//     // ADD ROUTES
+//     const url = req.url;
+
+//     if (url === "/profile") {
+//       res.write("<h1>Welcome to your profile</h1>");
+//       res.write("<p>Im an appretice for R2H</p>");
+//       res.write("<p>I love coffee</p>");
+//       res.end();
+//       res.writeHead(200, { "Content-Type": "application/json" });
+//       res.write(JSON.stringify(work));
+//       res.end();
+//     } else {
+//       res.write("<h1>HELLO WORLD</h1>");
+//       res.end();
+//     }
+//   })
+
+//   .listen(port, () => {
+//     // here is where the server is running on our port 5000
+//     console.log(`Server listening on port ${port}`);
+//   });
