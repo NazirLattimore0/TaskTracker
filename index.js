@@ -8,13 +8,14 @@ window.addEventListener("load", () => {
   const list_el = document.querySelector("#tasks");
 
   form.addEventListener("submit", (e) => {
+    // stops it from refreshing your page when it submits to add task
     e.preventDefault();
 
-    const task = input.value;
+    const task = input.value; // for the input value if you dont submit anything it alerts
     if (!task) {
       alert("Please insert a task");
       return;
-    } // if you dont input anything you
+    }
 
     const task_el = document.createElement("div");
     task_el.classList.add("task");

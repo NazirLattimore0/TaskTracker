@@ -51,13 +51,15 @@ button {
   background: none;
 }
 
+/* Styling of where you put in your new task */
+
 #new-task-input {
-  flex: 1 1 0%;
-  background-color: var(--darker);
+  flex: 1 1 0%; /* pushes the add task all the way to the right */
+  background-color: var(--darkest);
   padding: 1rem;
-  border-radius: 3rem;
+  border-radius: 1rem;
   margin-right: 0;
-  color: var(--darker);
+  color: var(--grey);
   font-size: 1.25rem;
 }
 
